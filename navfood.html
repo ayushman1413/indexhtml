@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart-like Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2874f0;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu .menu-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.navbar-menu .menu-item a {
+    color: rgb(247, 242, 242);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgb(15, 14, 14);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none;
+    width: 200px;
+}
+
+.dropdown-content {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.dropdown-content li {
+    padding: 10px;
+}
+
+.dropdown-content li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #090909;
+}
+
+/* Hover Effect */
+.menu-item:hover .dropdown {
+    display: block;
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li class="menu-item">
+                <a href="#">Categories</a>
+                <div class="dropdown">
+                    <ul class="dropdown-content">
+                        <li><a href="#">Non-Veg</a></li>
+                        <li><a href="#">Veg</a></li>
+                        <li><a href="#">Cold Drinks</a></li>
+                        <li><a href="#">Water</a></li>
+                        <li><a href="#">Snacks</a></li>
+                        <li><a href="#">Lunch</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
